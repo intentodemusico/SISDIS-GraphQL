@@ -1,0 +1,92 @@
+"comments"
+type Author {
+    "more more more"
+    id: ID!
+    name: String!
+    email: String!
+    papers: [Paper]
+}
+
+type Paper {
+    id: ID!
+    title: String!
+    authors: [Author!]!
+    references: [Reference]
+}
+
+type Reference {
+    id: ID!
+    PT: String!
+    abstract: String!
+    annote: Int
+    author: String!
+    doi: String!
+    file: String
+    issn: String
+    journal: String
+    keywords: String
+    month: String
+    pages: String
+    publisher: String!
+    title: String!
+    url: String
+    volume: Int
+    year: Int!
+}
+
+type Query {
+    authors: [Author!]!
+    author(id: ID!): Author!
+
+    papers: [Paper!]!
+    paper(id: ID!): Paper!
+
+    references: [Reference!]!
+    reference(id: ID!): Reference!
+}
+
+type Mutation {
+    createAuthor(author: AuthorInput!): Author!
+    updateAuthor(author: AuthorInput!): Author!
+    deleteAuthor(id: ID!): Boolean!
+
+    createPaper(paper: PaperInput!): Paper!
+    updatePaper(paper: PaperInput!): Paper!
+    deletePaper(id: ID!): Boolean!
+
+    createReference(reference: ReferenceInput!): Reference!
+    updateReference(reference: ReferenceInput!): Reference!
+    deleteReference(id: ID!): Boolean!
+}
+
+input AuthorInput {
+    id: ID
+    name: String!
+    email: String!
+}
+
+input PaperInput {
+    id: ID
+    title: String!
+    authors: [AuthorInput!]!
+}
+
+input ReferenceInput {
+    id: ID
+    PT: String!
+    abstract: String!
+    annote: Int
+    author: String!
+    doi: String!
+    file: String
+    issn: String
+    journal: String
+    keywords: String
+    month: String
+    pages: String
+    publisher: String!
+    title: String!
+    url: String
+    volume: Int
+    year: Int!
+}

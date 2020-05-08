@@ -1,0 +1,60 @@
+{
+  authors {
+    id
+    name
+    email 
+    papers {
+      id
+      title
+      references {
+        id
+        title
+        year
+      }      
+    }    
+  }
+}
+-----------------------------------------------
+{
+  author(id: 1) {
+    id
+    name
+    email 
+    papers {
+      id
+      title
+      references {
+        id
+        title
+        year
+      }      
+    } 
+  }
+}
+-----------------------------------------------
+mutation editAuthor($author: AuthorInput!){
+  updateAuthor(author: $author){
+    name
+  }
+}
+
+-- varibles:
+{
+  "author": {
+  	"id": "4"
+  }
+}
+-----------------------------------------------
+mutation insertAuthor($author: AuthorInput!){
+  createAuthor(author: $author){
+    name
+  }
+}
+
+-- varibles:
+{
+  "author": {
+    "name": "nuevo1",
+    "email": "email@test.com"
+  }
+}

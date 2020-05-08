@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "title": "Requirements Elicitation Methods",
+        "authors": [
+            "1",
+            "2",
+            "3"
+        ],
+        "references": [
+            "r:2013:Bu:13532772",
+            "r:2011:Da:1368059",
+            "r:2017:Ah:89788046"
+        ]
+    },
+    {
+        "id": "2",
+        "title": "Requirements Specification Methods",
+        "authors": [
+            "2",
+            "3",
+            "4"
+        ],
+        "references": [
+            "r:2013:Pa:1894075",
+            "r:2018:Da:51733597",
+            "r:2011:Da:1368059"
+        ]
+    },
+    {
+        "id": "3",
+        "title": "Requirements Standard Methods",
+        "authors": [
+            "1",
+            "3"
+        ],
+        "references": [
+            "r:2016:He:91971872",
+            "r:2015:Ga:66431261",
+            "r:2018:Mu:6509050",
+            "r:2009:Du:77234985"
+        ]
+    }
+]
